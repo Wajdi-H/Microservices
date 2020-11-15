@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-lg-8">
+<h1 style="margin-left:20px">Liste des livres</h1>
+</div>
+<div class="col-lg-4">
+<app-addbooks></app-addbooks>
+</div>
+</div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">name</th>
+        <th scope="col">autor</th>
+  
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let element of listLivres">
+        <td>{{element._id}}</td>
+        <td>{{element.title}}</td>
+        <td> {{element.author}}</td>
+  
+
+      </tr>
+    </tbody>
+  </table>
+

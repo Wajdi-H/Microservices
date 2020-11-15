@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-lg-8">
+<h1 style="margin-left:20px">Liste des commandes</h1>
+</div>
+<div class="col-lg-4">
+   <app-add-commande></app-add-commande>
+</div>
+</div>
+<hr>
+<table *ngIf="listCommandes" style="margin-left: 30%;">
+    <tr>
+        <th>ID_Client</th><th>Etat</th><th>Montant</th><th>Date_commande</th>
+    </tr>
+    <tr *ngFor=" let c of listCommandes._embedded.commandes ">
+      <td>{{c.id_client}}</td> 
+      <td> {{c.etat}}</td> 
+      <td> {{c.montant}}</td> 
+        <td>{{c.date_commande}}</td> 
+
+    </tr>
+</table>
