@@ -14,7 +14,7 @@ export class CommandesComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get("http://192.168.1.10:8181/commandes").subscribe(data => {
+    this.http.get("http://172.18.0.1:8181/commandes").subscribe(data => {
       this.listCommandes = data; 
   }, err => {
     console.log(err);
